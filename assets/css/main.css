@@ -51,7 +51,6 @@
   --surface-color: #28323a;
   --contrast-color: #ffffff;
 }
-
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
