@@ -28,6 +28,92 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
+<!-- <style>
+  .relative-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .relative-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .button-overlay {
+    position: absolute;
+    top: 350px;
+    right: 400px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* transparan */
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Responsive: pindah ke bawah saat layar kecil */
+  @media (max-width: 768px) {
+    .button-overlay {
+      position: static;
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+    }
+  } 
+</style> -->
+
+<style>
+  .relative-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .relative-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Transparansi kiri dan kanan pakai gradient */
+    background: linear-gradient(to right,
+        rgba(0, 0, 0, 0) 38%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(249, 249, 248, 0.9) 100%);
+    z-index: 1;
+  }
+
+  .button-overlay {
+    position: absolute;
+    top: 250px;
+    right: 350px;
+    z-index: 2;
+    /* di atas overlay gradient */
+    /* background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px; */
+  }
+
+  @media (max-width: 768px) {
+    .button-overlay {
+      position: static;
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .gradient-overlay {
+      display: none;
+    }
+  }
+</style>
+
+
+
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top" style="display: none !important;">
@@ -92,8 +178,27 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="daftar" class="about section">
+    <!-- <div id="daftar" class="relative-wrapper">
+      <img src="assets/img/poster-banner.png" alt="Banner">
+      <div class="button-overlay">
+        <button class="btn btn-primary">Daftar Sekarang</button>
+      </div>
+    </div> -->
 
+    <div id="daftar" class="relative-wrapper" data-aos="fade-up" data-aos-delay="100">
+      <img src="assets/img/poster-banner.png" alt="Banner">
+      <div class="gradient-overlay"></div> <!-- overlay transparan -->
+      <div class="button-overlay" data-aos="fade-up" data-aos-delay="250">
+        <div class="d-grid gap-2 p-3">
+          <p style="font-size: large; color: black;">Daftar dengan menekan tombol di bawah ini.</p>
+          <a href="#" class="btn btn-danger">Memiliki Rekening Tabungan Bank Eka</a>
+          <a href="#" class="btn btn-danger">Belum Memiliki Rekening Tabungan Bank Eka</a>
+        </div>
+      </div>
+    </div>
+
+
+    <section id="daftar" class="about section" style="display: none;">
       <div class="container">
 
         <div class="row gy-4">
