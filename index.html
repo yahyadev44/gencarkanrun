@@ -227,6 +227,51 @@
       border: 2px solid #ff4a17;
     }
   }
+
+  /* Dekstop besar */
+  @media (min-width: 1850px) {
+    .carousel-caption-custom img {
+      width: 65%;
+      height: 65%;
+      position: relative;
+    }
+
+    .carousel-caption-custom .title {
+      margin: 0;
+      padding-top: 10px;
+      font-weight: 600;
+    }
+
+    .carousel-caption-custom .title-ket {
+      color: #fff;
+    }
+
+    .carousel-caption-custom .title-button {
+      background-color: #ff4a17;
+      color: #ffff;
+      padding: 7px 40px;
+      font-size: 20px;
+      border: 2px solid #ff4a17;
+      transition: 0.3s !important;
+    }
+
+    .carousel-caption-custom .title-button:hover {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .content-side-kanan {
+      text-align: center;
+      padding: 50px 50px;
+      position: relative;
+      top: 190px;
+    }
+
+    .content-side-kanan .button-daftar {
+      font-size: 20px;
+    }
+  }
 </style>
 
 
@@ -280,14 +325,15 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/hero-bg2.jpg" class="d-block w-100" alt="gencarkan run ojk lampung">
+          <img src="assets/img/hero-bg2.jpg" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50"
+            data-aos-offset="0" class="d-block w-100" alt="gencarkan run ojk lampung">
 
           <!-- Teks di tengah -->
           <div class="carousel-caption-custom">
             <img src="assets/img/gencarkan.png" alt="gercarkanrun" data-aos="fade-up" data-aos-delay="50">
             <p class="title" data-aos="fade-up" data-aos-delay="100">RUN. RUN. RUN.</p>
             <p class="title-ket" data-aos="fade-up" data-aos-delay="150">Lorem ipsum dolor sit.</p>
-            <a href="#daftar" data-aos="fade-up" data-aos-delay="250" type="button" class="title-button">DAFTAR
+            <a href="#daftar" data-aos="fade-up" data-aos-delay="150" type="button" class="title-button">DAFTAR
               SEKARANG</a>
           </div>
         </div>
