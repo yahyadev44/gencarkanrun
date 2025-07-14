@@ -13,10 +13,10 @@
   <link href="assets/img/gencarkan.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -28,86 +28,203 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<!-- <style>
-  .relative-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .relative-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .button-overlay {
-    position: absolute;
-    top: 350px;
-    right: 400px;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* transparan */
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  /* Responsive: pindah ke bawah saat layar kecil */
-  @media (max-width: 768px) {
-    .button-overlay {
-      position: static;
-      display: block;
-      margin-top: 10px;
-      text-align: center;
-    }
-  } 
-</style> -->
-
 <style>
-  .relative-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .relative-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .gradient-overlay {
+  .carousel-caption-custom {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Transparansi kiri dan kanan pakai gradient */
-    background: linear-gradient(to right,
-        rgba(0, 0, 0, 0) 38%,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(249, 249, 248, 0.9) 100%);
-    z-index: 1;
-  }
-
-  .button-overlay {
-    position: absolute;
-    top: 250px;
-    right: 350px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    /* di atas overlay gradient */
-    /* background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 5px; */
+    font-size: 2rem;
+    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .button-overlay {
-      position: static;
-      display: block;
-      margin-top: 10px;
-      text-align: center;
+  .carousel-caption-custom img {
+    width: 40%;
+    height: 40%;
+    position: relative;
+  }
+
+  .carousel-caption-custom .title {
+    margin: 0;
+    padding-top: 10px;
+    font-weight: 600;
+  }
+
+  .carousel-caption-custom .title-ket {
+    color: #fff;
+  }
+
+  .carousel-caption-custom .title-button {
+    background-color: #ff4a17;
+    color: #ffff;
+    padding: 7px 40px;
+    font-size: 20px;
+    border: 2px solid #ff4a17;
+    transition: 0.3s !important;
+  }
+
+  .carousel-caption-custom .title-button:hover {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  #daftar {
+    padding: 0;
+  }
+
+  .side-kanan {
+    background-image: url('./assets/img/postercrop2.png');
+    background-size: cover;
+  }
+
+  .no-gutter {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
+  .content-side-kanan {
+    text-align: center;
+    padding: 50px 50px;
+    position: relative;
+    top: 120px;
+  }
+
+  .content-side-kanan .button-daftar {
+    font-size: 13px;
+  }
+
+  .content-side-kanan .button-daftar a {
+    background-color: #ff4a17;
+    color: #fff;
+    padding: 7px 30px;
+    border: 2px solid #ff4a17;
+    transition: 0.3s !important;
+  }
+
+  .content-side-kanan .button-daftar a:hover {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .content-side-kanan .button-daftar .button-daftar-2 {
+    position: relative;
+    top: 20px;
+  }
+
+  /* Tablet */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .carousel-caption-custom {
+      margin-top: 15px;
     }
 
-    .gradient-overlay {
-      display: none;
+    .carousel-caption-custom img {
+      width: 75%;
+      height: 75%;
+      position: relative;
+    }
+
+    .carousel-caption-custom .title {
+      font-size: 35px;
+    }
+
+    .carousel-caption-custom .title-ket {
+      font-size: 20px;
+    }
+
+    .carousel-caption-custom .title-button {
+      position: relative;
+      top: -15px;
+      font-size: 15px;
+      padding: 3px 10px;
+    }
+
+    .side-kanan {
+      background: none !important;
+    }
+
+    .content-side-kanan {
+      position: relative;
+      padding: 20px 20px;
+      top: 40px;
+      height: 200px;
+    }
+
+    .content-side-kanan p {
+      color: black !important;
+    }
+
+    .content-side-kanan .button-daftar {
+      font-size: 12px;
+    }
+
+    .content-side-kanan .button-daftar a {
+      padding: 5px 10px;
+    }
+
+    .content-side-kanan .button-daftar a:hover {
+      background: none;
+      color: #ff4a17;
+      border: 2px solid #ff4a17;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .carousel-caption-custom {
+      margin-top: 15px;
+    }
+
+    .carousel-caption-custom img {
+      width: 75%;
+      height: 75%;
+      position: relative;
+    }
+
+    .carousel-caption-custom .title {
+      font-size: 19px;
+    }
+
+    .carousel-caption-custom .title-ket {
+      font-size: 15px;
+    }
+
+    .carousel-caption-custom .title-button {
+      position: relative;
+      top: -25px;
+      font-size: 10px;
+      padding: 3px 10px;
+    }
+
+    .side-kanan {
+      background: none !important;
+    }
+
+    .content-side-kanan {
+      position: relative;
+      padding: 20px 20px;
+      top: 40px;
+      height: 200px;
+    }
+
+    .content-side-kanan p {
+      color: black !important;
+    }
+
+    .content-side-kanan .button-daftar {
+      font-size: 12px;
+    }
+
+    .content-side-kanan .button-daftar a {
+      padding: 5px 10px;
+    }
+
+    .content-side-kanan .button-daftar a:hover {
+      background: none;
+      color: #ff4a17;
+      border: 2px solid #ff4a17;
     }
   }
 </style>
@@ -160,72 +277,40 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/hero-bg2.jpg" class="d-block w-100" alt="gencarkan run ojk lampung">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container d-flex flex-column align-items-center">
-        <img src="assets/img/gencarkan.png" alt="gercarkanrun" style="width: 40%; height: 40%; position: relative;"
-          data-aos="fade-up" data-aos-delay="50">
-        <h2 class="mt-2" data-aos="fade-up" data-aos-delay="100">RUN. RUN. RUN.</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur.</p>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="#daftar" class="btn-get-started">Daftar Sekarang</a>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <!-- <div id="daftar" class="relative-wrapper">
-      <img src="assets/img/poster-banner.png" alt="Banner">
-      <div class="button-overlay">
-        <button class="btn btn-primary">Daftar Sekarang</button>
-      </div>
-    </div> -->
-
-    <div id="daftar" class="relative-wrapper" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/img/poster-banner.webp" alt="Banner">
-      <div class="gradient-overlay"></div> <!-- overlay transparan -->
-      <div class="button-overlay" data-aos="fade-up" data-aos-delay="250">
-        <div class="d-grid gap-2 p-3">
-          <p style="font-size: large; color: black;">Daftar dengan menekan tombol di bawah ini.</p>
-          <a href="#" class="btn btn-danger">Memiliki Rekening Tabungan Bank Eka</a>
-          <a href="#" class="btn btn-danger">Belum Memiliki Rekening Tabungan Bank Eka</a>
+          <!-- Teks di tengah -->
+          <div class="carousel-caption-custom">
+            <img src="assets/img/gencarkan.png" alt="gercarkanrun" data-aos="fade-up" data-aos-delay="50">
+            <p class="title" data-aos="fade-up" data-aos-delay="100">RUN. RUN. RUN.</p>
+            <p class="title-ket" data-aos="fade-up" data-aos-delay="150">Lorem ipsum dolor sit.</p>
+            <a href="#daftar" data-aos="fade-up" data-aos-delay="250" type="button" class="title-button">DAFTAR
+              SEKARANG</a>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <section id="daftar" class="about section" style="display: none;">
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-            <img src="assets/img/poster-run.png" class="img-fluid rounded-4 mb-4" alt="">
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <!-- <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua.
-              </p> -->
-              <p style="text-align: justify;"><b>Daftar dengan menekan tombol di bawah ini.</b></p>
-              <div class="d-grid gap-2">
-                <a href="#" class="btn btn-outline-danger ">Memiliki Rekening Tabungan Bank Eka</a>
-                <a href="#" class="btn btn-outline-danger ">Belum Memiliki Rekening Tabungan Bank Eka</a>
-              </div>
+    <section id="daftar">
+      <div class="row no-gutter">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/postercrop1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 side-kanan" data-aos="fade-up" data-aos-delay="100">
+          <div class="content-side-kanan" data-aos="fade-up" data-aos-delay="150">
+            <p class="text-light"><b>Daftar dengan menekan tombol di bawah ini.</b></p>
+            <div class="button-daftar">
+              <a href="#" class="button-daftar-1">Memiliki Rekening Tabungan Bank Eka</a> <br>
+              <a href="#" class="button-daftar-2">Belum Memiliki Rekening Tabungan Bank Eka</a>
             </div>
           </div>
         </div>
       </div>
-
-      </div>
-
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Services 2 Section -->
     <section id="services-2" class="services-2 section">
@@ -245,7 +330,8 @@
               <i class="bi bi-briefcase icon flex-shrink-0"></i>
               <div>
                 <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                  sint
                   occaecati cupiditate non provident</p>
               </div>
             </div>
@@ -300,7 +386,8 @@
               <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
               <div>
                 <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+                  cum
                   soluta nobis est eligendi</p>
               </div>
             </div>
