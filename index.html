@@ -1,56 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>GENCARKAN RUN</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
 
-    <!-- Favicons -->
-    <link href="assets/img/gencarkan.webp" rel="icon" />
-    <link href="assets/img/gencarkan.webp" rel="apple-touch-icon" />
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>GENCARKAN RUN</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link href="assets/img/gencarkan.webp" rel="icon" />
+  <link href="assets/img/gencarkan.webp" rel="apple-touch-icon" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
-  </head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-  <style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<style>
+  .carousel-caption-custom {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .carousel-caption-custom img {
+    width: 40%;
+    height: 40%;
+    position: relative;
+  }
+
+  .carousel-caption-custom .title {
+    margin: 0;
+    padding-top: 10px;
+    font-weight: 600;
+  }
+
+  .carousel-caption-custom .title-ket {
+    color: #fff;
+  }
+
+  .carousel-caption-custom .title-button {
+    background-color: #c23616;
+    color: #ffff;
+    padding: 7px 40px;
+    font-size: 20px;
+    border: 2px solid #c23616;
+    transition: 0.3s !important;
+  }
+
+  .carousel-caption-custom .title-button:hover {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  #daftar {
+    padding: 0;
+  }
+
+  .side-kanan {
+    background-image: url("./assets/img/postercrop2.webp");
+    background-size: cover;
+  }
+
+  .no-gutter {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
+  .content-side-kanan {
+    text-align: center;
+    padding: 50px 50px;
+    position: relative;
+    top: 120px;
+  }
+
+  .content-side-kanan .button-daftar {
+    font-size: 13px;
+  }
+
+  .content-side-kanan .button-daftar a {
+    background-color: #c23616;
+    color: #fff;
+    padding: 7px 30px;
+    border: 2px solid #c23616;
+    transition: 0.3s !important;
+  }
+
+  .content-side-kanan .button-daftar a:hover {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .content-side-kanan .button-daftar .button-daftar-2 {
+    position: relative;
+    top: 20px;
+  }
+
+  .scrolled .header {
+    --background-color: rgb(237, 2, 9, 0.3) !important;
+  }
+
+  .color-text-orange {
+    color: #ff4a17 !important;
+  }
+
+  /* Tablet */
+  @media (max-width: 991px) and (min-width: 768px) {
     .carousel-caption-custom {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      font-size: 2rem;
-      text-align: center;
+      margin-top: 15px;
     }
 
     .carousel-caption-custom img {
-      width: 40%;
-      height: 40%;
+      width: 75%;
+      height: 75%;
+      position: relative;
+    }
+
+    .carousel-caption-custom .title {
+      font-size: 35px;
+    }
+
+    .carousel-caption-custom .title-ket {
+      font-size: 20px;
+    }
+
+    .carousel-caption-custom .title-button {
+      position: relative;
+      top: -15px;
+      font-size: 15px;
+      padding: 3px 10px;
+    }
+
+    .side-kanan {
+      background: none !important;
+    }
+
+    .side-kiri img {
+      display: none;
+    }
+
+    .content-side-kanan {
+      position: relative;
+      padding: 20px 20px;
+      top: 40px;
+      height: 200px;
+    }
+
+    .content-side-kanan p {
+      color: black !important;
+    }
+
+    .content-side-kanan .button-daftar {
+      font-size: 12px;
+    }
+
+    .content-side-kanan .button-daftar a {
+      padding: 5px 10px;
+    }
+
+    .content-side-kanan .button-daftar a:hover {
+      background: none;
+      color: #c23616;
+      border: 2px solid #c23616;
+    }
+
+    .header {
+      margin-top: 0px !important;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .carousel-caption-custom {
+      margin-top: 15px;
+    }
+
+    .carousel-caption-custom img {
+      width: 75%;
+      height: 75%;
+      position: relative;
+    }
+
+    .carousel-caption-custom .title {
+      font-size: 19px;
+    }
+
+    .carousel-caption-custom .title-ket {
+      font-size: 15px;
+    }
+
+    .carousel-caption-custom .title-button {
+      position: relative;
+      top: -25px;
+      font-size: 10px;
+      padding: 3px 10px;
+    }
+
+    .side-kanan {
+      background: none !important;
+    }
+
+    .side-kiri img {
+      display: none;
+    }
+
+    .content-side-kanan {
+      position: relative;
+      padding: 20px 20px;
+      top: 40px;
+      height: 200px;
+    }
+
+    .content-side-kanan p {
+      color: black !important;
+    }
+
+    .content-side-kanan .button-daftar {
+      font-size: 12px;
+    }
+
+    .content-side-kanan .button-daftar a {
+      padding: 5px 10px;
+    }
+
+    .content-side-kanan .button-daftar a:hover {
+      background: none;
+      color: #c23616;
+      border: 2px solid #c23616;
+    }
+
+    .header {
+      margin-top: 0px !important;
+    }
+  }
+
+  /* Dekstop besar */
+  @media (min-width: 1850px) {
+    .carousel-caption-custom img {
+      width: 65%;
+      height: 65%;
       position: relative;
     }
 
@@ -79,1072 +285,740 @@
       color: #fff;
     }
 
-    #daftar {
-      padding: 0;
-    }
-
-    .side-kanan {
-      background-image: url("./assets/img/postercrop2.webp");
-      background-size: cover;
-    }
-
-    .no-gutter {
-      --bs-gutter-x: 0;
-      --bs-gutter-y: 0;
-    }
-
     .content-side-kanan {
       text-align: center;
       padding: 50px 50px;
       position: relative;
-      top: 120px;
+      top: 190px;
     }
 
     .content-side-kanan .button-daftar {
-      font-size: 13px;
+      font-size: 20px;
     }
 
-    .content-side-kanan .button-daftar a {
-      background-color: #c23616;
-      color: #fff;
-      padding: 7px 30px;
-      border: 2px solid #c23616;
-      transition: 0.3s !important;
+    .header {
+      padding-top: 25px;
     }
-
-    .content-side-kanan .button-daftar a:hover {
-      background: none;
-      color: #fff;
-      border: 2px solid #fff;
-    }
-
-    .content-side-kanan .button-daftar .button-daftar-2 {
-      position: relative;
-      top: 20px;
-    }
-
-    .scrolled .header {
-      --background-color: rgb(237, 2, 9, 0.3) !important;
-    }
-
-    .color-text-orange {
-      color: #ff4a17 !important;
-    }
-
-    /* Tablet */
-    @media (max-width: 991px) and (min-width: 768px) {
-      .carousel-caption-custom {
-        margin-top: 15px;
-      }
-
-      .carousel-caption-custom img {
-        width: 75%;
-        height: 75%;
-        position: relative;
-      }
-
-      .carousel-caption-custom .title {
-        font-size: 35px;
-      }
-
-      .carousel-caption-custom .title-ket {
-        font-size: 20px;
-      }
-
-      .carousel-caption-custom .title-button {
-        position: relative;
-        top: -15px;
-        font-size: 15px;
-        padding: 3px 10px;
-      }
-
-      .side-kanan {
-        background: none !important;
-      }
-
-      .side-kiri img {
-        display: none;
-      }
-
-      .content-side-kanan {
-        position: relative;
-        padding: 20px 20px;
-        top: 40px;
-        height: 200px;
-      }
-
-      .content-side-kanan p {
-        color: black !important;
-      }
-
-      .content-side-kanan .button-daftar {
-        font-size: 12px;
-      }
-
-      .content-side-kanan .button-daftar a {
-        padding: 5px 10px;
-      }
-
-      .content-side-kanan .button-daftar a:hover {
-        background: none;
-        color: #c23616;
-        border: 2px solid #c23616;
-      }
-
-      .header {
-        margin-top: 0px !important;
-      }
-    }
-
-    /* Mobile */
-    @media (max-width: 767px) {
-      .carousel-caption-custom {
-        margin-top: 15px;
-      }
-
-      .carousel-caption-custom img {
-        width: 75%;
-        height: 75%;
-        position: relative;
-      }
-
-      .carousel-caption-custom .title {
-        font-size: 19px;
-      }
-
-      .carousel-caption-custom .title-ket {
-        font-size: 15px;
-      }
-
-      .carousel-caption-custom .title-button {
-        position: relative;
-        top: -25px;
-        font-size: 10px;
-        padding: 3px 10px;
-      }
-
-      .side-kanan {
-        background: none !important;
-      }
-
-      .side-kiri img {
-        display: none;
-      }
-
-      .content-side-kanan {
-        position: relative;
-        padding: 20px 20px;
-        top: 40px;
-        height: 200px;
-      }
-
-      .content-side-kanan p {
-        color: black !important;
-      }
-
-      .content-side-kanan .button-daftar {
-        font-size: 12px;
-      }
-
-      .content-side-kanan .button-daftar a {
-        padding: 5px 10px;
-      }
-
-      .content-side-kanan .button-daftar a:hover {
-        background: none;
-        color: #c23616;
-        border: 2px solid #c23616;
-      }
-
-      .header {
-        margin-top: 0px !important;
-      }
-    }
-
-    /* Dekstop besar */
-    @media (min-width: 1850px) {
-      .carousel-caption-custom img {
-        width: 65%;
-        height: 65%;
-        position: relative;
-      }
-
-      .carousel-caption-custom .title {
-        margin: 0;
-        padding-top: 10px;
-        font-weight: 600;
-      }
-
-      .carousel-caption-custom .title-ket {
-        color: #fff;
-      }
-
-      .carousel-caption-custom .title-button {
-        background-color: #c23616;
-        color: #ffff;
-        padding: 7px 40px;
-        font-size: 20px;
-        border: 2px solid #c23616;
-        transition: 0.3s !important;
-      }
-
-      .carousel-caption-custom .title-button:hover {
-        background: none;
-        border: 2px solid #fff;
-        color: #fff;
-      }
-
-      .content-side-kanan {
-        text-align: center;
-        padding: 50px 50px;
-        position: relative;
-        top: 190px;
-      }
-
-      .content-side-kanan .button-daftar {
-        font-size: 20px;
-      }
-
-      .header {
-        padding-top: 25px;
-      }
-    }
-  </style>
-
-  <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center"
-      >
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="sitename"></h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li>
-              <a href="#carouselExampleSlidesOnly" class="active">Home</a>
-            </li>
-            <li><a href="#daftar">Daftar</a></li>
-            <li><a href="#ketentuan">Ketentuan</a></li>
-            <li><a href="#pendaftaran">Pendaftaran</a></li>
-            <li><a href="#kategori">Kategori</a></li>
-            <li><a href="#biaya">Biaya</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Pack</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="#jersey">Jersey</a></li>
-                <li><a href="#hadiah">Hadiah</a></li>
-              </ul>
-            </li>
-            <li><a href="#partner">Partner</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
-
-    <main class="main">
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="assets/img/hero-bg2.webp"
-              data-aos="fade-zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="50"
-              data-aos-offset="0"
-              class="d-block w-100"
-              alt="gencarkan run ojk lampung"
-            />
-
-            <!-- Teks di tengah -->
-            <div class="carousel-caption-custom">
-              <img src="assets/img/gencarkan.webp" alt="gercarkanrun" />
-              <p class="title">RUN. RUN. RUN.</p>
-              <p class="title-ket">Lorem ipsum dolor sit.</p>
-              <a href="#daftar" type="button" class="title-button rounded-4"
-                >DAFTAR SEKARANG</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <section id="daftar">
-        <div class="row no-gutter">
-          <div
-            class="col-lg-6 side-kiri"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <img src="assets/img/postercrop1.webp" class="img-fluid" alt="" />
-          </div>
-          <div
-            class="col-lg-6 side-kanan"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div
-              class="content-side-kanan"
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              <p class="text-light">
-                <b>Daftar dengan menekan tombol di bawah ini.</b>
-              </p>
-              <div class="button-daftar">
-                <a href="#" class="button-daftar-1 rounded-4"
-                  >Memiliki Rekening Tabungan Bank Eka</a
-                >
-                <br />
-                <a href="#" class="button-daftar-2 rounded-4"
-                  >Belum Memiliki Rekening Tabungan Bank Eka</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services 2 Section -->
-      <section id="ketentuan" class="services-2 section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>Peraturan & Ketentuan</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-              <ol>
-                <li>
-                  Dengan mendaftar pada lomba Gencarkan Run 2025, berarti
-                  Peserta telah menerima sepenuhnya dan wajib memenuhi Peraturan
-                  & Ketentuan.
-                </li>
-                <li>
-                  Lomba akan dilaksanakan pada hari
-                  <span class="color-text-orange"
-                    >Minggu, 31 Agustus 2025.</span
-                  >
-                </li>
-                <li>
-                  Garis start dan garis finis Lomba akan berlokasi di Taman
-                  Merdeka, Kota Metro, Lampung.
-                </li>
-                <li>
-                  Kategori jarak lomba adalah
-                  <span class="color-text-orange">10K</span> dan
-                  <span class="color-text-orange">5K.</span>
-                </li>
-                <li>
-                  Pendaftaran lomba terbuka untuk seluruh Warga Negara Indonesia
-                  (WNI) yang memenuhi syarat usia minimal.
-                </li>
-                <li>
-                  Peserta dapat menjadi pemenang dalam podium keseluruhan pada
-                  10K dan 5K, yang terbagi menjadi kategori pria dan wanita.
-                  Podium Open untuk WNI yang berpartisipasi dalam 10K dan 5K,
-                  yang terbagi menjadi kategori pria dan wanita. Dan Podium
-                  Master bagi WNI berusia lebih dari 45 tahun yang terbagi
-                  menjadi kategori pria dan wanita, baik 10K maupun 5K.
-                </li>
-                <li>
-                  Pada saat pendaftaran, Peserta wajib memenuhi syarat usia
-                  minimal untuk masing-masing kategori jarak, dengan rincian
-                  sebagai berikut :
-                  <table cellpadding="1">
-                    <tr>
-                      <td>
-                        <i
-                          class="bi bi-check-circle-fill color-text-orange"
-                        ></i>
-                      </td>
-                      <td>10K Master</td>
-                      <td style="padding-left: 50px !important">
-                        : 45 (empat puluh lima) tahun
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <i
-                          class="bi bi-check-circle-fill color-text-orange"
-                        ></i>
-                      </td>
-                      <td>10K Open</td>
-                      <td style="padding-left: 50px !important">
-                        : 18 (delapan belas) tahun
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <i
-                          class="bi bi-check-circle-fill color-text-orange"
-                        ></i>
-                      </td>
-                      <td>5K Master</td>
-                      <td style="padding-left: 50px !important">
-                        : 45 (empat puluh lima) tahun
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <i
-                          class="bi bi-check-circle-fill color-text-orange"
-                        ></i>
-                      </td>
-                      <td>5K Open</td>
-                      <td style="padding-left: 50px !important">
-                        : 12 (dua belas) tahun
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-                <li>
-                  Peserta yang berusia di bawah 18 (delapan belas) tahun pada
-                  saat pendaftaran diwajibkan untuk memberikan surat persetujuan
-                  orang tua. Format surat dapat diunduh
-                  <a
-                    href="/assets/file/Surat-Persetujuan-Orang-Tua.pdf"
-                    class="color-text-orange"
-                    target="_blank"
-                    ><b><u>DI SINI</u></b></a
-                  >
-                </li>
-                <li>
-                  Peserta disarankan untuk meminta saran medis dari dokter
-                  terkait kondisi kesehatan Peserta sebelum berpartisipasi dalam
-                  Lomba. Peserta mengakui dan menerima bahwa keikutsertaannya
-                  dalam Lomba membawa potensi risiko dan bahaya, termasuk tetapi
-                  tidak terbatas pada kecelakaan, cedera fisik, masalah
-                  kesehatan, kelumpuhan, kematian, kerusakan pada properti
-                  dan/atau kerugian lainnya, dan risiko lain yang tidak
-                  diketahui sebelumnya dan yang saat ini tidak dapat diprediksi
-                  secara wajar (“<b class="color-text-orange"
-                    >Risiko dan Bahaya</b
-                  >“). Risiko dan Bahaya dapat terjadi karena antara lain
-                  tindakan atau kelalaian Peserta atau tindakan atau kelalaian
-                  orang lain, dan/atau kondisi fasilitas dan/atau peralatan dan
-                  kondisi alam dan/atau cuaca dan/atau kondisi
-                  <i>Force Majeure.</i>
-                </li>
-                <li>
-                  <b class="color-text-orange">Force Majeure</b> merupakan
-                  keadaan atau kondisi perang (apakah dinyatakan atau tidak),
-                  kekerasan, kerusuhan sosial, pemogokan, wabah, kecelakaan,
-                  kebakaran, banjir, bencana alam, embargo, alasan hukum, atau
-                  tindakan pemerintah Republik Indonesia, dan kondisi/keadaan
-                  serupa lainnya yang dapat terjadi di luar kemampuan
-                  Penyelenggara Lomba untuk mencegahnya.
-                </li>
-                <li>
-                  Penyelenggara lomba Gencarka Run 2025 tidak akan bertanggung
-                  jawab atas segala bahaya dan/atau kerugian yang disebabkan
-                  oleh hal-hal berikut, termasuk tetapi tidak terbatas pada:
-                  <ol>
-                    <li>Terjadinya Risiko dan Bahaya;</li>
-                    <li>Datang terlambat pada Lomba;</li>
-                    <li>Penyakit bawaan;</li>
-                    <li>Kecelakaan saat mengikuti lomba;</li>
-                    <li>
-                      Kehilangan dan/atau kerusakan properti pribadi
-                      masing-masing saat mengikuti lomba dan/atau
-                    </li>
-                    <li>
-                      <i>Force Majeure</i> (sebagaimana didefinisikan di bawah
-                      ini)
-                    </li>
-                  </ol>
-                </li>
-                <li>
-                  Dari waktu ke waktu, Penyelenggara Lomba dapat mengubah
-                  Peraturan & Ketentuan sesuai dengan kebijakan sendiri tanpa
-                  pemberitahuan sebelumnya. Peserta berkewajiban untuk rutin
-                  meninjau Peraturan & Ketentuan ini.
-                </li>
-                <li>
-                  Hal-hal lain yang belum tercantum dalam Peraturan & Ketentuan
-                  ini akan ditentukan kemudian oleh Penyelenggara Lomba.
-                </li>
-                <li>
-                  Penyelenggara Lomba memiliki hak untuk menutup pendaftaran
-                  sebelum batas akhir waktu pendaftaran dan/atau dalam hal kuota
-                  Lomba telah terpenuhi.
-                </li>
-                <li>
-                  Peserta setuju untuk memberikan informasi yang benar, akurat,
-                  terkini dan lengkap dalam formulir pendaftaran dan pembukaan
-                  rekening tabungan. Peserta bertanggung jawab atas setiap
-                  informasi yang diberikan.
-                </li>
-                <li>
-                  Penyelenggara Lomba dapat menghubungi Peserta dari waktu ke
-                  waktu melalui email. Setiap pemberitahuan yang dikirim oleh
-                  Penyelenggara Lomba ke alamat email yang terdaftar pada
-                  Penyelenggara Lomba akan dianggap telah diterima oleh Peserta.
-                </li>
-                <li>
-                  Pendaftaran Peserta yang telah terkonfirmasi bersifat final
-                  dan tidak dapat dipindahtangankan dan/atau diperjualbelikan
-                  kepada pihak lain. Peserta, beserta pihak terkait, yang
-                  kedapatan melakukan penjualan dan/atau pemindahan
-                  keikutsertaan Lomba, akan didiskualifikasi dari Lomba.
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Services 2 Section -->
-
-      <!-- Services 2 Section -->
-      <section id="pendaftaran" class="services-2 section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>
-            Pendaftaran, Pembukaan Rekening Tabungan dan Pengambilan Race Pack
-            dan Jersey
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-              <ol>
-                <li>
-                  Pendaftaran lomba dan pembukaan rekening Tabungan Bank Eka
-                  melalui google form dengan klik
-                  <a href="#" class="color-text-orange"><b>daftar</b></a>
-                </li>
-                <li>
-                  Setelah mengisi dan mengirimkan google form, calon peserta
-                  akan menerima email konfirmasi pendaftaran. Di dalam email
-                  akan diberitahukan nomor rekening Tabungan Bank Eka atas nama
-                  calon peserta.
-                </li>
-                <li>
-                  Calon peserta melakukan setoran ke rekening tabungan tersebut
-                  sejumlah <b class="color-text-orange">Rp150.000</b> yang akan
-                  diblokir selama 2 bulan.
-                </li>
-                <li>
-                  Setoran dapat dilakukan dengan cara:
-                  <ol type="a">
-                    <li>
-                      Setoran tunai melalui Teller atau Mesin CRM (Setor Tarik)
-                      di Bank Eka.
-                    </li>
-                    <li>Setoran melalui Agen Point Bank Eka.</li>
-                    <li>
-                      Transfer melalui ATM, Mobile Banking, Internet Banking
-                      bank manapun dan VA Bank Mandiri.
-                      <table cellpadding="1">
-                        <tr>
-                          <td>1)</td>
-                          <td>
-                            Kode Transfer (ATM) Bank Eka adalah 867 + Nomor
-                            Rekening Bank Eka Peserta;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>2)</td>
-                          <td>
-                            Kode transfer (Mobile Banking) pilih bank tujuan
-                            "Bank Eka" atau "BPR Eka", dilanjutkan mengisi Nomor
-                            Rekening Bank Eka Peserta;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>3)</td>
-                          <td>
-                            Kode VA Bank Mandiri adalah 87983 + Nomor Rekening
-                            Bank Eka Peserta.
-                          </td>
-                        </tr>
-                      </table>
-                    </li>
-                  </ol>
-                </li>
-                <li>
-                  Setoran atau transfer maksimal H+1 setelah email diterima.
-                </li>
-                <li>
-                  H+1 setelah transaksi setor atau transfer, peserta akan
-                  menerima email Konfirmasi Pendaftaran Berhasil yang berisi
-                  informasi nomor registrasi (dalam bentuk kode QR), dan jadwal
-                  pengambilan Race Pack dan Jersey.
-                </li>
-                <li>
-                  Peserta mengambil Race Pack dan Jersey sesuai dengan jadwal
-                  dan lokasi yang dipilih saat pengisian formulir pendaftaran.
-                </li>
-                <li>
-                  Pengambilan Race Pack dan Jersey dengan menunjukkan Kode QR
-                  dan KTP asli, dapat diwakilkan dengan menyerahkan surat kuasa
-                  dan fotocopy KTP peserta yang dikuasakan. Template Surat Kuasa
-                  dapat diunduh
-                  <a
-                    href="/assets/file/Surat-Kuasa-Pengambilan-Race-Pack.pdf"
-                    class="color-text-orange"
-                    target="_blank"
-                    ><b><u>DISINI</u></b></a
-                  >
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Services 2 Section -->
-
-      <!-- Services 2 Section -->
-      <section id="kategori" class="services-2 section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>KATEGORI</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >5K - MM (Master Male)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 45 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >5K – MF (Master Female)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 45 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >5K – OM (Open Male)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 12 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >5K – OF (Open Female)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 12 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >10K – MM (Master Male)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 45 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >10K – MF (Master Female)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 45 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >10K – OM (Open Male)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 18 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link color-text-orange"
-                      >10K – OF (Open Female)</a
-                    >
-                  </h4>
-                  <p class="description">
-                    Syarat usia minimal 18 tahun, pada saat pendaftaran
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services 2 Section -->
-
-      <!-- Services 2 Section -->
-      <section id="biaya" class="services-2 section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>BIAYA</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-              <ol>
-                <li>
-                  Pendaftaran tidak dikenakan biaya
-                  <b class="color-text-orange">(GRATIS)</b>
-                </li>
-                <li>
-                  Wajib membuka rekening Tabungan Bank Eka
-                  <ol type="a">
-                    <li>
-                      Bagi peserta berusia < 17 tahun dan belum memiliki KTP,
-                      membuka rekening Tabungan SImpel.
-                    </li>
-                    <li>
-                      Bagi peserta berusia >= 17 tahun, dan/atau sudah memiliki
-                      KTP, membuka rekening Tabungan Ekasave.
-                    </li>
-                  </ol>
-                </li>
-                <li>
-                  Melakukan setoran <b class="color-text-orange">Rp150.000</b>,
-                  diblokir selama 2 bulan. Pembukaan blokir tanggal 1 Oktober
-                  2025.
-                </li>
-                <li>
-                  Tetap mengacu pada ketentuan Tabungan Ekasave dan Tabungan
-                  Simpel Bank Eka yang berlaku, termasuk ketentuan saldo
-                  minimal, bunga dan biaya administrasi.
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Services 2 Section -->
-
-      <!-- Services 2 Section -->
-      <section id="timeline" class="services-2 section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>TIMELINE</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="bi bi-highlighter icon flex-shrink-0"></i>
-
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link">1. Pendaftaran</a>
-                  </h4>
-                  <p class="description">22 Juli s.d 22 Agustus 2025</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="bi bi-box icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link"
-                      >2. Pengambilan Race Pack</a
-                    >
-                  </h4>
-                  <p class="description">27 s.d 29 Agustus 2025</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item d-flex position-relative h-100">
-                <i class="bi bi-person-walking icon flex-shrink-0"></i>
-                <div>
-                  <h4 class="title">
-                    <a href="#" class="stretched-link">3. Race</a>
-                  </h4>
-                  <p class="description">31 Agustus 2025</p>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services 2 Section -->
-
-      <!-- Portfolio Section -->
-      <section id="jersey" class="portfolio section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>JERSEY & MEDALI FINISHER</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
+  }
+</style>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#carouselExampleSlidesOnly" class="active">Home</a>
+          </li>
+          <li><a href="#daftar">Daftar</a></li>
+          <li><a href="#ketentuan">Ketentuan</a></li>
+          <li><a href="#pendaftaran">Pendaftaran</a></li>
+          <li><a href="#kategori">Kategori</a></li>
+          <li><a href="#biaya">Biaya</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Pack</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#jersey">Jersey</a></li>
+              <li><a href="#hadiah">Hadiah</a></li>
             </ul>
-            <!-- End Portfolio Filters -->
+          </li>
+          <li><a href="#partner">Partner</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
 
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/jersey.jpg" class="img-fluid" alt="" />
-                  <div class="portfolio-info">
-                    <h4>Jersey</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/jersey.jpg"
-                      title="Jersey"
-                      data-gallery="portfolio-gallery-app"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a href="#" title="More Details" class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
+  <main class="main">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/hero-bg2.webp" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="50"
+            data-aos-offset="0" class="d-block w-100" alt="gencarkan run ojk lampung" />
 
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/medali.jpg" class="img-fluid" alt="" />
-                  <div class="portfolio-info">
-                    <h4>Medali</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                    <a
-                      href="assets/img/medali.jpg"
-                      title="Medali"
-                      data-gallery="portfolio-gallery-product"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                    <a href="#" title="More Details" class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-            </div>
-            <!-- End Portfolio Container -->
+          <!-- Teks di tengah -->
+          <div class="carousel-caption-custom">
+            <img src="assets/img/gencarkan.webp" alt="gercarkanrun" />
+            <p class="title">RUN. RUN. RUN.</p>
+            <p class="title-ket">Lorem ipsum dolor sit.</p>
+            <a href="#daftar" type="button" class="title-button rounded-4">DAFTAR SEKARANG</a>
           </div>
         </div>
-      </section>
-      <!-- /Portfolio Section -->
-
-      <!-- Contact Section -->
-      <section id="hadiah" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2></h2>
-          <p>HADIAH</p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex flex-column justify-content-center align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="bi bi-trophy"></i>
-                <p class="px-5 text-center pt-3">
-                  Hadiah Podium Juara 1, 2, 3 masing - masing kategori
-                  <br />(Total 8 Kategori)
-                </p>
-              </div>
-            </div>
-            <!-- End Info Item -->
-
-            <div class="col-md-6">
-              <div
-                class="info-item d-flex flex-column justify-content-center align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="bi bi-gift"></i>
-                <p class="px-5 text-center pt-3">
-                  Hadiah Doorprize yang akan diundi pada saat event Gencarkan
-                  Run 2025.
-                </p>
-              </div>
-            </div>
-            <!-- End Info Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Contact Section -->
-
-      <!-- Clients Section -->
-      <section id="partner" class="clients section light-background">
-        <div class="container" data-aos="fade-up">
-          <div class="row gy-4">
-            <div class="col-xl-4 col-md-4 col-4 client-logo">
-              <img src="assets/img/ojk.png" class="img-fluid" alt="" />
-            </div>
-            <!-- End Client Item -->
-
-            <div class="col-xl-4 col-md-4 col-4 client-logo">
-              <img src="assets/img/bank-eka.png" class="img-fluid" alt="" />
-            </div>
-            <!-- End Client Item -->
-
-            <div class="col-xl-4 col-md-4 col-4 client-logo">
-              <img
-                src="assets/img/pemkot.png"
-                width="65%"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <!-- End Client Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Clients Section -->
-    </main>
-
-    <footer id="footer" class="footer dark-background">
-      <div class="container copyright text-center">
-        <p>
-          © <span>Copyright</span> <strong class="px-1 sitename">EBA</strong>
-          <span>All Rights Reserved</span>
-        </p>
-        <div class="credits"></div>
       </div>
-    </footer>
+    </div>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <section id="daftar">
+      <div class="row no-gutter">
+        <div class="col-lg-6 side-kiri" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/postercrop1.webp" class="img-fluid" alt="" />
+        </div>
+        <div class="col-lg-6 side-kanan" data-aos="fade-up" data-aos-delay="100">
+          <div class="content-side-kanan" data-aos="fade-up" data-aos-delay="150">
+            <p class="text-light">
+              <b>Daftar dengan menekan tombol di bawah ini.</b>
+            </p>
+            <div class="button-daftar">
+              <a href="#" class="button-daftar-1 rounded-4">Memiliki Rekening Tabungan Bank Eka</a>
+              <br />
+              <a href="#" class="button-daftar-2 rounded-4">Belum Memiliki Rekening Tabungan Bank Eka</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    <!-- Services 2 Section -->
+    <section id="ketentuan" class="services-2 section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>Peraturan & Ketentuan</p>
+      </div>
+      <!-- End Section Title -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+            <ol>
+              <li>
+                Dengan mendaftar pada lomba Gencarkan Run 2025, berarti
+                Peserta telah menerima sepenuhnya dan wajib memenuhi Peraturan
+                & Ketentuan.
+              </li>
+              <li>
+                Lomba akan dilaksanakan pada hari
+                <span class="color-text-orange">Minggu, 31 Agustus 2025.</span>
+              </li>
+              <li>
+                Garis start dan garis finis Lomba akan berlokasi di Taman
+                Merdeka, Kota Metro, Lampung.
+              </li>
+              <li>
+                Kategori jarak lomba adalah
+                <span class="color-text-orange">10K</span> dan
+                <span class="color-text-orange">5K.</span>
+              </li>
+              <li>
+                Pendaftaran lomba terbuka untuk seluruh Warga Negara Indonesia
+                (WNI) yang memenuhi syarat usia minimal.
+              </li>
+              <li>
+                Peserta dapat menjadi pemenang dalam podium keseluruhan pada
+                10K dan 5K, yang terbagi menjadi kategori pria dan wanita.
+                Podium Open untuk WNI yang berpartisipasi dalam 10K dan 5K,
+                yang terbagi menjadi kategori pria dan wanita. Dan Podium
+                Master bagi WNI berusia lebih dari 45 tahun yang terbagi
+                menjadi kategori pria dan wanita, baik 10K maupun 5K.
+              </li>
+              <li>
+                Pada saat pendaftaran, Peserta wajib memenuhi syarat usia
+                minimal untuk masing-masing kategori jarak, dengan rincian
+                sebagai berikut :
+                <table cellpadding="1">
+                  <tr>
+                    <td>
+                      <i class="bi bi-check-circle-fill color-text-orange"></i>
+                    </td>
+                    <td>10K Master</td>
+                    <td style="padding-left: 50px !important">
+                      : 45 (empat puluh lima) tahun
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="bi bi-check-circle-fill color-text-orange"></i>
+                    </td>
+                    <td>10K Open</td>
+                    <td style="padding-left: 50px !important">
+                      : 18 (delapan belas) tahun
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="bi bi-check-circle-fill color-text-orange"></i>
+                    </td>
+                    <td>5K Master</td>
+                    <td style="padding-left: 50px !important">
+                      : 45 (empat puluh lima) tahun
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="bi bi-check-circle-fill color-text-orange"></i>
+                    </td>
+                    <td>5K Open</td>
+                    <td style="padding-left: 50px !important">
+                      : 12 (dua belas) tahun
+                    </td>
+                  </tr>
+                </table>
+              </li>
+              <li>
+                Peserta yang berusia di bawah 18 (delapan belas) tahun pada
+                saat pendaftaran diwajibkan untuk memberikan surat persetujuan
+                orang tua. Format surat dapat diunduh
+                <a href="/gencarkanrun/assets/file/Surat-Persetujuan-Orang-Tua.pdf" class="color-text-orange"
+                  target="_blank"><b><u>DI SINI</u></b></a>
+              </li>
+              <li>
+                Peserta disarankan untuk meminta saran medis dari dokter
+                terkait kondisi kesehatan Peserta sebelum berpartisipasi dalam
+                Lomba. Peserta mengakui dan menerima bahwa keikutsertaannya
+                dalam Lomba membawa potensi risiko dan bahaya, termasuk tetapi
+                tidak terbatas pada kecelakaan, cedera fisik, masalah
+                kesehatan, kelumpuhan, kematian, kerusakan pada properti
+                dan/atau kerugian lainnya, dan risiko lain yang tidak
+                diketahui sebelumnya dan yang saat ini tidak dapat diprediksi
+                secara wajar (“<b class="color-text-orange">Risiko dan Bahaya</b>“). Risiko dan Bahaya dapat terjadi
+                karena antara lain
+                tindakan atau kelalaian Peserta atau tindakan atau kelalaian
+                orang lain, dan/atau kondisi fasilitas dan/atau peralatan dan
+                kondisi alam dan/atau cuaca dan/atau kondisi
+                <i>Force Majeure.</i>
+              </li>
+              <li>
+                <b class="color-text-orange">Force Majeure</b> merupakan
+                keadaan atau kondisi perang (apakah dinyatakan atau tidak),
+                kekerasan, kerusuhan sosial, pemogokan, wabah, kecelakaan,
+                kebakaran, banjir, bencana alam, embargo, alasan hukum, atau
+                tindakan pemerintah Republik Indonesia, dan kondisi/keadaan
+                serupa lainnya yang dapat terjadi di luar kemampuan
+                Penyelenggara Lomba untuk mencegahnya.
+              </li>
+              <li>
+                Penyelenggara lomba Gencarka Run 2025 tidak akan bertanggung
+                jawab atas segala bahaya dan/atau kerugian yang disebabkan
+                oleh hal-hal berikut, termasuk tetapi tidak terbatas pada:
+                <ol>
+                  <li>Terjadinya Risiko dan Bahaya;</li>
+                  <li>Datang terlambat pada Lomba;</li>
+                  <li>Penyakit bawaan;</li>
+                  <li>Kecelakaan saat mengikuti lomba;</li>
+                  <li>
+                    Kehilangan dan/atau kerusakan properti pribadi
+                    masing-masing saat mengikuti lomba dan/atau
+                  </li>
+                  <li>
+                    <i>Force Majeure</i> (sebagaimana didefinisikan di bawah
+                    ini)
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Dari waktu ke waktu, Penyelenggara Lomba dapat mengubah
+                Peraturan & Ketentuan sesuai dengan kebijakan sendiri tanpa
+                pemberitahuan sebelumnya. Peserta berkewajiban untuk rutin
+                meninjau Peraturan & Ketentuan ini.
+              </li>
+              <li>
+                Hal-hal lain yang belum tercantum dalam Peraturan & Ketentuan
+                ini akan ditentukan kemudian oleh Penyelenggara Lomba.
+              </li>
+              <li>
+                Penyelenggara Lomba memiliki hak untuk menutup pendaftaran
+                sebelum batas akhir waktu pendaftaran dan/atau dalam hal kuota
+                Lomba telah terpenuhi.
+              </li>
+              <li>
+                Peserta setuju untuk memberikan informasi yang benar, akurat,
+                terkini dan lengkap dalam formulir pendaftaran dan pembukaan
+                rekening tabungan. Peserta bertanggung jawab atas setiap
+                informasi yang diberikan.
+              </li>
+              <li>
+                Penyelenggara Lomba dapat menghubungi Peserta dari waktu ke
+                waktu melalui email. Setiap pemberitahuan yang dikirim oleh
+                Penyelenggara Lomba ke alamat email yang terdaftar pada
+                Penyelenggara Lomba akan dianggap telah diterima oleh Peserta.
+              </li>
+              <li>
+                Pendaftaran Peserta yang telah terkonfirmasi bersifat final
+                dan tidak dapat dipindahtangankan dan/atau diperjualbelikan
+                kepada pihak lain. Peserta, beserta pihak terkait, yang
+                kedapatan melakukan penjualan dan/atau pemindahan
+                keikutsertaan Lomba, akan didiskualifikasi dari Lomba.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services 2 Section -->
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Services 2 Section -->
+    <section id="pendaftaran" class="services-2 section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>
+          Pendaftaran, Pembukaan Rekening Tabungan dan Pengambilan Race Pack
+          dan Jersey
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+            <ol>
+              <li>
+                Pendaftaran lomba dan pembukaan rekening Tabungan Bank Eka
+                melalui google form dengan klik
+                <a href="#" class="color-text-orange"><b>daftar</b></a>
+              </li>
+              <li>
+                Setelah mengisi dan mengirimkan google form, calon peserta
+                akan menerima email konfirmasi pendaftaran. Di dalam email
+                akan diberitahukan nomor rekening Tabungan Bank Eka atas nama
+                calon peserta.
+              </li>
+              <li>
+                Calon peserta melakukan setoran ke rekening tabungan tersebut
+                sejumlah <b class="color-text-orange">Rp150.000</b> yang akan
+                diblokir selama 2 bulan.
+              </li>
+              <li>
+                Setoran dapat dilakukan dengan cara:
+                <ol type="a">
+                  <li>
+                    Setoran tunai melalui Teller atau Mesin CRM (Setor Tarik)
+                    di Bank Eka.
+                  </li>
+                  <li>Setoran melalui Agen Point Bank Eka.</li>
+                  <li>
+                    Transfer melalui ATM, Mobile Banking, Internet Banking
+                    bank manapun dan VA Bank Mandiri.
+                    <table cellpadding="1">
+                      <tr>
+                        <td>1)</td>
+                        <td>
+                          Kode Transfer (ATM) Bank Eka adalah 867 + Nomor
+                          Rekening Bank Eka Peserta;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2)</td>
+                        <td>
+                          Kode transfer (Mobile Banking) pilih bank tujuan
+                          "Bank Eka" atau "BPR Eka", dilanjutkan mengisi Nomor
+                          Rekening Bank Eka Peserta;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3)</td>
+                        <td>
+                          Kode VA Bank Mandiri adalah 87983 + Nomor Rekening
+                          Bank Eka Peserta.
+                        </td>
+                      </tr>
+                    </table>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Setoran atau transfer maksimal H+1 setelah email diterima.
+              </li>
+              <li>
+                H+1 setelah transaksi setor atau transfer, peserta akan
+                menerima email Konfirmasi Pendaftaran Berhasil yang berisi
+                informasi nomor registrasi (dalam bentuk kode QR), dan jadwal
+                pengambilan Race Pack dan Jersey.
+              </li>
+              <li>
+                Peserta mengambil Race Pack dan Jersey sesuai dengan jadwal
+                dan lokasi yang dipilih saat pengisian formulir pendaftaran.
+              </li>
+              <li>
+                Pengambilan Race Pack dan Jersey dengan menunjukkan Kode QR
+                dan KTP asli, dapat diwakilkan dengan menyerahkan surat kuasa
+                dan fotocopy KTP peserta yang dikuasakan. Template Surat Kuasa
+                dapat diunduh
+                <a href="/gencarkanrun/assets/file/Surat-Kuasa-Pengambilan-Race-Pack.pdf" class="color-text-orange"
+                  target="_blank"><b><u>DISINI</u></b></a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services 2 Section -->
+
+    <!-- Services 2 Section -->
+    <section id="kategori" class="services-2 section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>KATEGORI</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">5K - MM (Master Male)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 45 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">5K – MF (Master Female)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 45 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">5K – OM (Open Male)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 12 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">5K – OF (Open Female)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 12 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">10K – MM (Master Male)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 45 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">10K – MF (Master Female)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 45 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">10K – OM (Open Male)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 18 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link color-text-orange">10K – OF (Open Female)</a>
+                </h4>
+                <p class="description">
+                  Syarat usia minimal 18 tahun, pada saat pendaftaran
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services 2 Section -->
+
+    <!-- Services 2 Section -->
+    <section id="biaya" class="services-2 section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>BIAYA</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+            <ol>
+              <li>
+                Pendaftaran tidak dikenakan biaya
+                <b class="color-text-orange">(GRATIS)</b>
+              </li>
+              <li>
+                Wajib membuka rekening Tabungan Bank Eka
+                <ol type="a">
+                  <li>
+                    Bagi peserta berusia < 17 tahun dan belum memiliki KTP, membuka rekening Tabungan SImpel. </li>
+                  <li>
+                    Bagi peserta berusia >= 17 tahun, dan/atau sudah memiliki
+                    KTP, membuka rekening Tabungan Ekasave.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Melakukan setoran <b class="color-text-orange">Rp150.000</b>,
+                diblokir selama 2 bulan. Pembukaan blokir tanggal 1 Oktober
+                2025.
+              </li>
+              <li>
+                Tetap mengacu pada ketentuan Tabungan Ekasave dan Tabungan
+                Simpel Bank Eka yang berlaku, termasuk ketentuan saldo
+                minimal, bunga dan biaya administrasi.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services 2 Section -->
+
+    <!-- Services 2 Section -->
+    <section id="timeline" class="services-2 section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>TIMELINE</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-highlighter icon flex-shrink-0"></i>
+
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link">1. Pendaftaran</a>
+                </h4>
+                <p class="description">22 Juli s.d 22 Agustus 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-box icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link">2. Pengambilan Race Pack</a>
+                </h4>
+                <p class="description">27 s.d 29 Agustus 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-person-walking icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title">
+                  <a href="#" class="stretched-link">3. Race</a>
+                </h4>
+                <p class="description">31 Agustus 2025</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Services 2 Section -->
+
+    <!-- Portfolio Section -->
+    <section id="jersey" class="portfolio section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>JERSEY & MEDALI FINISHER</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+          </ul>
+          <!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/jersey.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4>Jersey</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/jersey.jpg" title="Jersey" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/medali.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4>Medali</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/medali.jpg" title="Medali" data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+          </div>
+          <!-- End Portfolio Container -->
+        </div>
+      </div>
+    </section>
+    <!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="hadiah" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2></h2>
+        <p>HADIAH</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="300">
+              <i class="bi bi-trophy"></i>
+              <p class="px-5 text-center pt-3">
+                Hadiah Podium Juara 1, 2, 3 masing - masing kategori
+                <br />(Total 8 Kategori)
+              </p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+              data-aos-delay="400">
+              <i class="bi bi-gift"></i>
+              <p class="px-5 text-center pt-3">
+                Hadiah Doorprize yang akan diundi pada saat event Gencarkan
+                Run 2025.
+              </p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+
+    <!-- Clients Section -->
+    <section id="partner" class="clients section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-xl-4 col-md-4 col-4 client-logo">
+            <img src="assets/img/ojk.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 col-4 client-logo">
+            <img src="assets/img/bank-eka.png" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+
+          <div class="col-xl-4 col-md-4 col-4 client-logo">
+            <img src="assets/img/pemkot.png" width="65%" class="img-fluid" alt="" />
+          </div>
+          <!-- End Client Item -->
+        </div>
+      </div>
+    </section>
+    <!-- /Clients Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container copyright text-center">
+      <p>
+        © <span>Copyright</span> <strong class="px-1 sitename">EBA</strong>
+        <span>All Rights Reserved</span>
+      </p>
+      <div class="credits"></div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
